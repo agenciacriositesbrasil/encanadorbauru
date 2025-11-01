@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-TEC Encanador em Bauru (SP) | Serviços Hidráulicos 24h</title>
+    <meta name="description" content="M-TEC Encanador em Bauru e região. Serviços hidráulicos residenciais, comerciais e industriais. Atendimento 24h, garantia e preço justo.">
+    <style>
+        /* Reset e estilos gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header e Navegação */
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .logo span {
+            color: #ffc107;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #ffc107;
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Banner Principal */
+        .banner {
+            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.9)), url('https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            margin-bottom: 50px;
+        }
+        
+        .banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .banner p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Botões de Ação */
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        }
+        
+        /* Seções de Conteúdo */
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #0056b3;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #ffc107;
+            margin: 15px auto;
+        }
+        
+        .content-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin: 25px 0 15px;
+            color: #0056b3;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        /* Seção de Serviços */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        
+        .service-content {
+            padding: 20px;
+        }
+        
+        /* Seção de Diferenciais */
+        .diferenciais-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        
+        .diferencial-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .diferencial-icon {
+            font-size: 2.5rem;
+            color: #0056b3;
+            margin-bottom: 15px;
+        }
+        
+        /* Seção de Referências */
+        .referencias {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .referencia-link {
+            background-color: #f1f1f1;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #0056b3;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .referencia-link:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+        
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            display: none;
+            padding-top: 10px;
+        }
+        
+        .faq-answer.active {
+            display: block;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #0056b3;
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h3 {
+            color: #ffc107;
+            margin-bottom: 20px;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .creditos {
+            font-size: 0.8rem;
+            margin-top: 20px;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .creditos a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: #0056b3;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .banner {
+                padding: 60px 20px;
+            }
+            
+            .banner h1 {
+                font-size: 2rem;
+            }
+            
+            .cta-button {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">M-TEC <span>Encanador</span></div>
+            <div class="mobile-menu">☰</div>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="banner">
+        <div class="container">
+            <h1>M-TEC Encanador em Bauru e Região</h1>
+            <p>Soluções completas em serviços hidráulicos para residências, comércios e indústrias. Atendimento 24 horas, garantia e preço justo.</p>
+            
+            <!-- Botões de Ação para WhatsApp -->
+            <div class="cta-buttons">
+                <a href="https://wa.me/5514997655340?&text=Gostaria+de+falar+com+encanador!" class="cta-button">Falar com encanador agora</a>
+                <a href="https://wa.me/5514997655340?&text=Gostaria+de+falar+com+encanador!" class="cta-button">Solicitar orçamento</a>
+                <a href="https://wa.me/5514997655340?&text=Gostaria+de+falar+com+encanador!" class="cta-button">Emergência 24h</a>
+            </div>
+            
+            <!-- Créditos -->
+            <div class="creditos">
+                <p><a href="https://criosites.com.br" target="_blank">Criação Sites Campinas</a> – 
+                <a href="https://www.fernandocoutinho.com/" target="_blank">Mentoria SEO</a> – 
+                <a href="https://hospedagemcampinas.com.br" target="_blank">Hospedagem de Sites em Campinas</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre/Missão, Visão e Valores -->
+    <section id="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre a M-TEC Encanador</h2>
+            
+            <div class="content-box">
+                <h3>Nossa Missão</h3>
+                <p>Oferecer soluções hidráulicas completas, eficientes e de alta qualidade para residências, comércios e indústrias em Bauru e região, garantindo a satisfação total dos nossos clientes através de serviços especializados, tecnologia avançada e atendimento personalizado.</p>
+                
+                <h3>Nossa Visão</h3>
+                <p>Ser reconhecida como a empresa referência em serviços hidráulicos na região de Bauru, destacando-se pela excelência técnica, inovação constante e compromisso com a sustentabilidade ambiental, construindo relacionamentos duradouros baseados na confiança e qualidade.</p>
+                
+                <h3>Nossos Valores</h3>
+                <ul>
+                    <li><strong>Qualidade:</strong> Comprometemo-nos com a excelência em cada serviço prestado, utilizando materiais de primeira linha e técnicas atualizadas.</li>
+                    <li><strong>Transparência:</strong> Atuamos com honestidade, apresentando orçamentos claros e sem surpresas, explicando detalhadamente cada etapa do serviço.</li>
+                    <li><strong>Pontualidade:</strong> Valorizamos o tempo dos nossos clientes, cumprindo rigorosamente os prazos estabelecidos.</li>
+                    <li><strong>Inovação:</strong> Investimos continuamente em tecnologia e capacitação para oferecer as melhores soluções do mercado.</li>
+                    <li><strong>Sustentabilidade:</strong> Prezamos pelo uso racional da água e pela preservação ambiental em todos os nossos serviços.</li>
+                    <li><strong>Comprometimento:</strong> Assumimos total responsabilidade por cada projeto, garantindo resultados que superem as expectativas.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Localização e Área de Atuação -->
+    <section id="localizacao">
+        <div class="container">
+            <h2 class="section-title">Localização e Área de Atuação</h2>
+            
+            <div class="content-box">
+                <p>A M-TEC Encanador está estrategicamente localizada em Bauru, São Paulo, permitindo-nos atender com agilidade e eficiência toda a região. Nossa base operacional em Bauru nos possibilita responder rapidamente às demandas emergenciais, garantindo que estejamos sempre próximos quando nossos clientes mais precisam.</p>
+                
+                <h3>Cidade de Bauru</h3>
+                <p>Atendemos todos os bairros de Bauru, desde o centro até as regiões mais afastadas, incluindo:</p>
+                <ul>
+                    <li>Centro</li>
+                    <li>Vila Universitária</li>
+                    <li>Jardim Estoril</li>
+                    <li>Vila Cardia</li>
+                    <li>Parque São Jorge</li>
+                    <li>Vila Água Vermelha</li>
+                    <li>Jardim Redentor</li>
+                    <li>E todos os demais bairros da cidade</li>
+                </ul>
+                
+                <h3>Região de Atuação</h3>
+                <p>Além de Bauru, atendemos também as seguintes cidades da região:</p>
+                <ul>
+                    <li>Agudos</li>
+                    <li>Lençóis Paulista</li>
+                    <li>Macatuba</li>
+                    <li>Pederneiras</li>
+                    <li>Arealva</li>
+                    <li>Boracéia</li>
+                    <li>E demais municípios em um raio de 50km</li>
+                </ul>
+                
+                <p>Nossa equipe está preparada para deslocar-se rapidamente para qualquer localidade dentro da nossa área de cobertura, garantindo o mesmo padrão de qualidade e eficiência em todos os serviços, independentemente da distância.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="servicos">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            
+            <div class="services-grid">
+                <!-- Serviços Residenciais -->
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <div class="service-content">
+                        <h3>Serviços Residenciais</h3>
+                        <p>Soluções completas para residências, apartamentos e condomínios:</p>
+                        <ul>
+                            <li>Instalação e reparo de tubulações</li>
+                            <li>Conserto de vazamentos em paredes e pisos</li>
+                            <li>Substituição de registros e torneiras</li>
+                            <li>Instalação de aquecedores e boilers</li>
+                            <li>Reparos em vasos sanitários e caixas acopladas</li>
+                            <li>Instalação de pias, tanques e lavatórios</li>
+                            <li>Manutenção preventiva de sistemas hidráulicos</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Serviços Comerciais -->
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <div class="service-content">
+                        <h3>Serviços Comerciais</h3>
+                        <p>Atendimento especializado para estabelecimentos comerciais:</p>
+                        <ul>
+                            <li>Instalação de redes hidráulicas para lojas e escritórios</li>
+                            <li>Manutenção de sistemas de água em shoppings</li>
+                            <li>Instalação de pontos de água para restaurantes</li>
+                            <li>Sistemas de combate a incêndio</li>
+                            <li>Instalação de bebedouros e filtros</li>
+                            <li>Manutenção de banheiros comerciais</li>
+                            <li>Sistemas de reuso de água</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Serviços Industriais -->
+                <div class="service-card">
+                    <div class="service-icon">🏭</div>
+                    <div class="service-content">
+                        <h3>Serviços Industriais</h3>
+                        <p>Soluções para o setor industrial com tecnologia avançada:</p>
+                        <ul>
+                            <li>Instalação de tubulações industriais</li>
+                            <li>Sistemas de água resfriada para máquinas</li>
+                            <li>Estações de tratamento de efluentes</li>
+                            <li>Sistemas de bombeamento industrial</li>
+                            <li>Instalação de válvulas e controles</li>
+                            <li>Manutenção preventiva em sistemas hidráulicos</li>
+                            <li>Projetos de tubulação para processos industriais</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Detecção de Vazamentos -->
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <div class="service-content">
+                        <h3>Detecção de Vazamentos</h3>
+                        <p>Identificação precisa de vazamentos com tecnologia de ponta:</p>
+                        <ul>
+                            <li>Detecção de vazamentos não aparentes</li>
+                            <li>Geofone eletrônico para localização precisa</li>
+                            <li>Teste de estanqueidade em tubulações</li>
+                            <li>Inspeção por câmera termográfica</li>
+                            <li>Detecção em paredes e pisos sem quebra</li>
+                            <li>Vazamentos em piscinas e áreas externas</li>
+                            <li>Laudo técnico com relatório detalhado</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Desentupimentos -->
+                <div class="service-card">
+                    <div class="service-icon">🚿</div>
+                    <div class="service-content">
+                        <h3>Desentupimentos</h3>
+                        <p>Serviços de desobstrução para todos os tipos de encanamento:</p>
+                        <ul>
+                            <li>Desentupimento de pias, tanques e ralos</li>
+                            <li>Limpeza de tubulações de esgoto</li>
+                            <li>Desobstrução de colunas e ramais</li>
+                            <li>Limpeza de caixas de gordura</li>
+                            <li>Desentupimento de vasos sanitários</li>
+                            <li>Hidrojateamento de alta pressão</li>
+                            <li>Limpeza com equipamento de ponta</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Projetos Hidráulicos -->
+                <div class="service-card">
+                    <div class="service-icon">📐</div>
+                    <div class="service-content">
+                        <h3>Projetos Hidráulicos</h3>
+                        <p>Desenvolvimento de projetos completos de sistemas hidráulicos:</p>
+                        <ul>
+                            <li>Projetos para construções novas</li>
+                            <li>Reformas e ampliações</li>
+                            <li>Projetos de irrigação automatizada</li>
+                            <li>Sistemas de reuso de águas pluviais</li>
+                            <li>Projetos de combate a incêndio</li>
+                            <li>Dimensionamento de reservatórios</li>
+                            <li>Adequação às normas técnicas</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Limpeza de Caixas d'Água -->
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <div class="service-content">
+                        <h3>Limpeza de Caixas d'Água</h3>
+                        <p>Higienização completa de reservatórios de água:</p>
+                        <ul>
+                            <li>Limpeza e desinfecção de caixas d'água</li>
+                            <li>Higienização de reservatórios superiores e inferiores</li>
+                            <li>Aplicação de produtos específicos e seguros</li>
+                            <li>Inspeção de vedação e estado das caixas</li>
+                            <li>Troca de flutuadores e componentes</li>
+                            <li>Limpeza de cisternas e poços</li>
+                            <li>Certificado de limpeza e higienização</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Manutenção Preventiva -->
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <div class="service-content">
+                        <h3>Manutenção Preventiva</h3>
+                        <p>Programas de manutenção para evitar problemas futuros:</p>
+                        <ul>
+                            <li>Inspeção periódica de sistemas hidráulicos</li>
+                            <li>Verificação de pressão da água</li>
+                            <li>Teste de funcionamento de registros e válvulas</li>
+                            <li>Inspeção de vazamentos ocultos</li>
+                            <li>Limpeza preventiva de ralos e sifões</li>
+                            <li>Verificação de bombas e pressurizadores</li>
+                            <li>Relatório técnico com recomendações</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Diferenciais -->
+    <section id="diferenciais">
+        <div class="container">
+            <h2 class="section-title">Nossos Diferenciais</h2>
+            
+            <div class="diferenciais-grid">
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">⚡</div>
+                    <h3>Rapidez no Atendimento</h3>
+                    <p>Atendemos emergências em até 2 horas na região de Bauru, com soluções rápidas e eficientes para minimizar danos e inconvenientes.</p>
+                </div>
+                
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">🔬</div>
+                    <h3>Tecnologia Avançada</h3>
+                    <p>Utilizamos equipamentos de última geração para diagnóstico preciso e reparos eficientes, incluindo câmeras de inspeção e geofones eletrônicos.</p>
+                </div>
+                
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">👨‍🔧</div>
+                    <h3>Equipe Qualificada</h3>
+                    <p>Nossos profissionais são constantemente capacitados, possuem certificações e ampla experiência no mercado, garantindo serviços de excelência.</p>
+                </div>
+                
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">🛡️</div>
+                    <h3>Garantia Total</h3>
+                    <p>Oferecemos garantia em todos os serviços prestados, assegurando a qualidade do trabalho e a satisfação completa dos nossos clientes.</p>
+                </div>
+                
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">💲</div>
+                    <h3>Preço Justo</h3>
+                    <p>Cobramos preços transparentes e competitivos, com orçamentos detalhados e sem cobranças de taxas extras não autorizadas.</p>
+                </div>
+                
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">🕒</div>
+                    <h3>Atendimento 24h</h3>
+                    <p>Funcionamos 24 horas por dia, 7 dias por semana, incluindo finais de semana e feriados, para atender suas emergências a qualquer momento.</p>
+                </div>
+                
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">📋</div>
+                    <h3>Orçamento Sem Compromisso</h3>
+                    <p>Fornecemos orçamentos detalhados e sem custo, permitindo que você conheça todos os custos antes de contratar nossos serviços.</p>
+                </div>
+                
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">🌱</div>
+                    <h3>Compromisso Ambiental</h3>
+                    <p>Adotamos práticas sustentáveis em nossos serviços, promovendo o uso racional da água e o descarte correto de resíduos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Referências Web -->
+    <section id="referencias">
+        <div class="container">
+            <h2 class="section-title">Referências Web</h2>
+            
+            <div class="content-box">
+                <p>Confira mais informações sobre nossos serviços em nossos canais especializados:</p>
+                
+                <div class="referencias">
+                    <a href="https://encanador.dev.br/" class="referencia-link" target="_blank">Encanador em Bauru</a>
+                    <a href="https://encanador.dev.br/encanador-residencial-em-bauru/" class="referencia-link" target="_blank">Encanador Residencial em Bauru</a>
+                    <a href="https://encanador.dev.br/encanador-para-desentupimento-em-bauru/" class="referencia-link" target="_blank">Encanador para Desentupimento em Bauru</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção FAQ -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            
+            <div class="content-box">
+                <div class="faq-item">
+                    <div class="faq-question">Quais são os horários de atendimento da M-TEC Encanador? <span>+</span></div>
+                    <div class="faq-answer">
+                        <p>Atendemos 24 horas por dia, 7 dias por semana, incluindo finais de semana e feriados. Para emergências, garantimos atendimento em até 2 horas na região de Bauru.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Como é feito o orçamento dos serviços? <span>+</span></div>
+                    <div class="faq-answer">
+                        <p>Realizamos uma avaliação presencial gratuita para identificar o problema e fornecer um orçamento detalhado e transparente, sem compromisso. Em alguns casos, podemos fazer uma avaliação preliminar por telefone ou vídeo.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Quais formas de pagamento são aceitas? <span>+</span></div>
+                    <div class="faq-answer">
+                        <p>Aceitamos diversas formas de pagamento: dinheiro, cartões de crédito e débito, PIX e transferência bancária. Oferecemos condições especiais para serviços de maior valor.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">A empresa oferece garantia nos serviços prestados? <span>+</span></div>
+                    <div class="faq-answer">
+                        <p>Sim, oferecemos garantia em todos os serviços executados. O prazo de garantia varia conforme o tipo de serviço e será informado no orçamento e na nota fiscal.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Como agendar um serviço com a M-TEC? <span>+</span></div>
+                    <div class="faq-answer">
+                        <p>Você pode entrar em contato conosco pelo WhatsApp, telefone ou através do nosso site. Nossa equipe irá agendar uma visita técnica para avaliação e orçamento sem custo.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">A empresa atende condomínios? <span>+</span></div>
+                    <div class="faq-answer">
+                        <p>Sim, atendemos condomínios residenciais e comerciais, oferecendo serviços de manutenção preventiva, corretiva e emergencial, além de projetos hidráulicos para áreas comuns.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Quanto tempo leva para realizar um desentupimento? <span>+</span></div>
+                    <div class="faq-answer">
+                        <p>O tempo varia conforme a complexidade do entupimento. Desentupimentos simples podem ser resolvidos em até 1 hora, enquanto casos mais complexos podem exigir algumas horas. Nossa equipe trabalha com eficiência para resolver o problema no menor tempo possível.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">É possível detectar vazamentos sem quebrar paredes? <span>+</span></div>
+                    <div class="faq-answer">
+                        <p>Sim, utilizamos tecnologia avançada como geofones eletrônicos e câmeras termográficas para detectar vazamentos ocultos sem a necessidade de quebra-quebra, preservando sua propriedade.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Com que frequência devo limpar minha caixa d'água? <span>+</span></div>
+                    <div class="faq-answer">
+                        <p>Recomendamos a limpeza e desinfecção de caixas d'água a cada 6 meses para garantir a qualidade da água e prevenir problemas de saúde. Para condomínios e estabelecimentos comerciais, essa periodicidade pode ser menor, conforme determinação da vigilância sanitária.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">A M-TEC faz serviços em obras novas? <span>+</span></div>
+                    <div class="faq-answer">
+                        <p>Sim, realizamos projetos e instalações completas de sistemas hidráulicos para obras novas, reformas e ampliações, seguindo as normas técnicas e garantindo a qualidade da instalação desde o início.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Final com Agradecimento e Convite à Ação -->
+    <section id="contato">
+        <div class="container">
+            <div class="content-box" style="text-align: center;">
+                <h2 class="section-title">Entre em Contato Conosco</h2>
+                
+                <p>Agradecemos sua visita ao nosso site e o interesse em nossos serviços. Na M-TEC Encanador, valorizamos cada cliente e nos dedicamos a oferecer soluções hidráulicas que superem expectativas, com profissionalismo, transparência e compromisso com a qualidade.</p>
+                
+                <p>Seja para uma simples manutenção preventiva, um reparo emergencial ou um projeto hidráulico completo, nossa equipe está pronta para atendê-lo com a excelência que nos tornou referência em Bauru e região.</p>
+                
+                <p>Não hesite em nos contatar para esclarecer dúvidas, solicitar um orçamento sem compromisso ou para atendimento de emergência 24 horas. Estamos aqui para ajudar e garantir que seu sistema hidráulico funcione perfeitamente.</p>
+                
+                <h3 style="margin-top: 30px;">Fale Conosco | Peça Orçamento | Atendimento 24h</h3>
+                
+                <!-- Botões de Ação Finais -->
+                <div class="cta-buttons" style="margin-top: 30px;">
+                    <a href="https://wa.me/5514997655340?&text=Gostaria+de+falar+com+encanador!" class="cta-button">Falar com encanador agora</a>
+                    <a href="https://wa.me/5514997655340?&text=Gostaria+de+falar+com+encanador!" class="cta-button">Solicitar orçamento</a>
+                    <a href="https://wa.me/5514997655340?&text=Gostaria+de+falar+com+encanador!" class="cta-button">Emergência 24h</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>M-TEC Encanador</h3>
+                    <p>Soluções completas em serviços hidráulicos para Bauru e região. Atendimento 24 horas, garantia e preço justo.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>WhatsApp: (14) 99765-5340</p>
+                    <p>E-mail: contato@mtecencanador.com.br</p>
+                    <p>Atendimento: 24 horas</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Área de Atuação</h3>
+                    <p>Bauru e região</p>
+                    <p>Agudos, Lençóis Paulista, Macatuba, Pederneiras e cidades próximas</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 M-TEC Encanador. Todos os direitos reservados.</p>
+                <div class="creditos">
+                    <p><a href="https://criosites.com.br" target="_blank">Criação Sites Campinas</a> – 
+                    <a href="https://www.fernandocoutinho.com/" target="_blank">Mentoria SEO</a> – 
+                    <a href="https://hospedagemcampinas.com.br" target="_blank">Hospedagem de Sites em Campinas</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Mobile
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+        
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('active');
+                
+                // Altera o ícone
+                const icon = question.querySelector('span');
+                icon.textContent = answer.classList.contains('active') ? '−' : '+';
+            });
+        });
+        
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('nav ul').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
